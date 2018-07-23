@@ -52,8 +52,19 @@ class StudioController extends x2base {
             //'accessControl',
         );
     }
-
-
+    
+ //Justin's changes
+ public function actionDisplayUrl() {
+	$id = Yii::app()->request->getPost('id', 'false');
+	if( $id != 'false'){	
+	$url = X2Force::model()->findByPk($id);
+		if( CJSON::encode($url->url) == "null" ) {
+			file_put_contents("/tmp/Justin.txt", "the url is null\n", FILE_APPEND);
+			$url->url = "/index.php/x2force/url/" . $url->name;
+			$url->save();
+		}
+	}	
+ }
     public function behaviors(){
         return array_merge (parent::behaviors () , 
             array(
