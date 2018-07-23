@@ -79,7 +79,8 @@ class X2forceController extends x2base {
     public function actionCreate() {
         $model=new X2force;
         $users=User::getNames();
-
+	// This is what justin Law worked on for this project
+	// checking if the name is a valid name.
         if(isset($_POST['X2force'])) {
             //$temp = $model->attributes;
             //$model->setX2Fields($_POST['X2force']);
