@@ -52,6 +52,20 @@ class StudioController extends x2base {
             //'accessControl',
         );
     }
+	
+  /**
+   * Downloads basic HTML template webpage
+   */
+   public function actionBuildWebpage(){
+        $id = Yii::app()->request->getPost('id', 'false');
+        if($id != 'false'){
+                $handle = fopen("/var/www/html/X2CRM/x2engine/protected/modules/x2force/views/x2force/" . "webpage" . ".php", 'w');
+                fwrite($handle, "<html>\n<h1><center>Hello World!</center></h1>\n</html>");
+                fclose($handle);
+                $url = "http://ec2-54-67-18-7.us-west-1.compute.amazonaws.com/index.php/x2force/" . "webpage";
+                echo $url;
+        }
+   }
     
  //Justin's changes
  public function actionDisplayUrl() {
