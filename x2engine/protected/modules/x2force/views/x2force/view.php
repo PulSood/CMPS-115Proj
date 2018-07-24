@@ -66,6 +66,23 @@ Yii::app()->clientScript->registerCss('contactRecordViewCss', "
 Yii::app()->clientScript->registerResponsiveCssFile(
         Yii::app()->theme->baseUrl . '/css/responsiveRecordView.css');
 
+if(isset($model->id)){
+        Yii::app()->clientScript->registerScript('goToWebpage',
+        "$('#go-to-webpage').click(function() {
+                $.ajax({
+                        url: yii.scriptUrl + '/studio/buildWebpage',
+                        type: 'POST',
+                        data:{id: ".$model->id."},
+                        success: function(url){
+                                alert('Success');
+                                alert(url);
+                                $(location).attr('href', url);
+                        }
+                });
+        });"
+        , CClientScript::POS_END);
+}
+
 include("protected/modules/x2force/x2forceConfig.php");
 
 $actionMenuViewItem = RecordViewLayoutManager::getViewActionMenuListItem ($model->id);
@@ -191,6 +208,7 @@ $this->widget ('ModelFileUploader', array(
 						?></td>
 	</tr>
 </table>
+<a class="x2-button highlight left" id="go-to-webpage" href="javascript:void(0);"><?php echo Yii::t('app', "Go to your Webpage"); ?></a>
 <?php
 //$this->widget('X2WidgetList', 
 //    array(
