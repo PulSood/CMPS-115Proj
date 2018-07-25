@@ -1,1 +1,1 @@
-I tested
+I tested GrapesJS implementation and functionality during Sprints 2 and 3 (especially 3) with Pulkit Sood. We did this primarily through human testing. We would run the HTML files integrated with GrapesJS and use inspect element if GrapesJS elements were not showing or were not functioning properly. We also tested if the draggable items can be edited and re-ordered or deleted easily.
