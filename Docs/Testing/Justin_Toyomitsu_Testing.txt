@@ -1,1 +1,3 @@
-I tested
+I tested the model for x2force. This test was crucial as it was let us talk back to the database to a certain table pertaining to the websites. I tested this by making sure the database was updated correctly and manually checked to seee if what I was recieving was the correct information based on the id of the website.
+I also tested to make sure that the url appeneded and put back into the database was correct. And that the script I made in JS was calling the correct action to answer the correct function of the displayURL button.
+These were all done through using debugging tools like "file_put_contents" or alerts when it came to debug the js and making sure it is being called correcly.
