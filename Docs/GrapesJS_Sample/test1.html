@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!-- The rest of your page's header here -->
+</head>
+
+<!-- <div id="gjs">
+  <div class="txt-red">Hello world!</div>
+  <style>.txt-red{color: red}</style>
+</div>
+
+<script type="text/javascript">
+  var editor = grapesjs.init({
+      container : '#gjs',
+      fromElement: true,
+  });
+</script> -->
+
+<link rel="stylesheet" href="grapesjs/dist/css/grapes.min.css">
+<script src="grapesjs/dist/grapes.min.js"></script>
+
+<div id="gjs"></div>
+
+<script type="text/javascript">
+  var editor = grapesjs.init({
+      container : '#gjs',
+      components: '<div class="txt-red">Hello world!</div>',
+      style: '.txt-red{color: red}',
+  });
+</script>
+
+</html>

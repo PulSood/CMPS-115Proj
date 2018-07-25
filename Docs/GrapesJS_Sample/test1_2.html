@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!-- The rest of your page's header here -->
+<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/7B695651-EC4C-DB42-9DB7-D2FD94D0248F/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://ff.kis.v2.scr.kaspersky-labs.com/F8420D49DF2D-7BD9-24BD-C4CE-156596B7/abn/main.css"/></head>
+
+<link rel="stylesheet" href="grapesjs/dist/css/grapes.min.css">
+<script src="grapesjs/dist/grapes.min.js"></script>
+
+<div id="gjs"></div>
+
+<script type="text/javascript">
+  var editor = grapesjs.init({
+    container : '#gjs',
+    components: '<div class="txt-red">Hello world!</div>',
+    style: '.txt-red{color: red}',
+  });
+  var blockManager = editor.BlockManager;
+
+  // 'my-first-block' is the ID of the block
+  blockManager.add('my-first-block', {
+    label: 'Simple block',
+    content: '<div class="my-block">This is a simple block</div>',
+  });
+
+  blockManager.get('my-first-block').set({
+    label: 'Updated simple block',
+    attributes: {
+      title: 'My title'
+    }
+  });
+  blockManager.add('my-map-block', {
+    label: 'Simple map block',
+    content: {
+      type: 'map', // Built-in 'map' component
+      style: {
+        height: '350px'
+      },
+      removable: true,
+    }
+  })
+  blockManager.add('h1-block', {
+    label: 'Heading',
+    content: '<h1>Put your title here</h1>',
+    attributes: {
+      title: 'Insert h1 block'
+    }
+  });
+    
+    //Shawn was working on this. The goal was to get a link and have a text box that pops up asking for the link and what text to display.
+    //The link would then be inserted. This is simalar to what google docs uses to insert links into a google word document. This was not finished.
+    /*
+       blockManager.add('link', {
+    label: 'link',
+    content: {
+      type: 'link', // Built-in 'link' component
+    }
+  })
+    */
+    
+  // blockManager.add('the-row-block', {
+  //   label: '2 Columns',
+  //   content: '<div class="row" data-gjs-droppable=".row-cell" data-gjs-custom-name="Row">' +
+  //            '<div class="row-cell" data-gjs-draggable=".row"></div>' +
+  //            '<div class="row-cell" data-gjs-draggable=".row"></div>' +
+  //            '</div>',
+  // });
+
+</script>
+
+</html>
