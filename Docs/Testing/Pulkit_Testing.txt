@@ -1,1 +1,1 @@
-I tested
+Shawn and I tested the functionality of GrapesJS as we were integrating it into our test HTML file. We used human testing and debugging. We would inspect element if certain GrapesJS elements and options were not showing or if drag and drop items were not being dropped onto the HTML page. We would also test the ease with which one could edit the templates i.e. edit the text within the GrapesJS template and see if there are any unexpected behaviors such as deleting the whole drag-and-drop element when hitting backspace.
