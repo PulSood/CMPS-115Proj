@@ -1,1 +1,1 @@
-I tested
+I tested GrapesJS implementation and functionality with Shawn Chumbar in Sprints 2 and 3, especially Sprint 3. I did this on my local machine via human testing and debugging. This involved running the HTML page with GrapesJS and using inspect element if the GrapesJS tools were missing entirely or not functioning.
