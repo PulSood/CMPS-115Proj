@@ -174,6 +174,14 @@ class X2forceController extends x2base {
         $model=new X2force('search');
         $this->render('admin', array('model'=>$model));
     }
+   
+    /**
+     * Webpage
+     */
+    public function actionWebpage(){
+        $model=new X2Force('search');
+        $this->render('webpage', array('model'=>$model));
+    }
 
     /**
      * Performs the AJAX validation.
